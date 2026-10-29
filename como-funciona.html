@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works · Nação GTA publishing tool</title>
+<style>body{margin:0;background:#12061f;color:#fff;font-family:system-ui,sans-serif;line-height:1.6;padding:48px 16px}main{max-width:760px;margin:0 auto}h1{font-weight:500;color:#ff3fa4}h2{font-weight:500;margin-top:2em;font-size:1.2em}p,li{color:#d9cdf0}code{background:#2a1145;padding:2px 6px;border-radius:4px}a{color:#ff3fa4}</style></head>
+<body><main>
+<h1>Nação GTA · internal publishing tool</h1>
+<p>This is a private, single-user command-line tool. It is used only by the owner of the YouTube channel
+<strong>NAÇÃO GTA</strong> (Brazilian fan channel about Grand Theft Auto VI) to upload the channel's own
+original Shorts. It has no public users, no web interface and no sign-up.</p>
+
+<h2>What it does</h2>
+<ol>
+<li>The owner produces an original Short (own narration, captions and editing) on his computer.</li>
+<li>The Short is placed in a local publishing queue with its title, description and tags.</li>
+<li>At the scheduled time, the tool calls <code>videos.insert</code> to upload the file to the owner's own channel,
+with <code>containsSyntheticMedia</code> declared when applicable.</li>
+<li>It calls <code>channels.list</code> (mine=true) to confirm which channel is connected and read its public statistics.</li>
+</ol>
+
+<h2>API usage</h2>
+<ul>
+<li>Scopes: <code>youtube.upload</code> and <code>youtube.readonly</code>.</li>
+<li>Volume: about 2 to 3 uploads per day (up to 3 Shorts per day during launch week).</li>
+<li>Only the owner's own Google account is authorized. No data from other YouTube users is accessed, stored or shared.</li>
+<li>OAuth tokens are stored only on the owner's computer.</li>
+</ul>
+
+<h2>Links</h2>
+<p><a href="./">Home</a> · <a href="privacidade.html">Privacy policy</a> · Contact: matossamuel111@gmail.com</p>
+</main></body></html>
